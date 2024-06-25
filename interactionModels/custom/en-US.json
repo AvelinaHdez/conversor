@@ -1,0 +1,73 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "value",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "fromUnit",
+              "type": "UNIT_TYPE"
+            },
+            {
+              "name": "toUnit",
+              "type": "UNIT_TYPE"
+            }
+          ],
+          "name": "ConvertIntent",
+          "samples": [
+            "convert {value} {fromUnit} to {toUnit}",
+            "change {value} {fromUnit} to {toUnit}",
+            "how many {toUnit} in {value} {fromUnit}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "inches"
+              }
+            },
+            {
+              "name": {
+                "value": "feet"
+              }
+            },
+            {
+              "name": {
+                "value": "yards"
+              }
+            }
+          ],
+          "name": "UNIT_TYPE"
+        }
+      ],
+      "invocationName": "conveter"
+    }
+  }
+}
